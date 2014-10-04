@@ -1,0 +1,32 @@
+# Rubocop,  we're buddies and all,  but we're going to have to disagree on the following -
+
+WordArray:
+  MinSize: 5
+
+# Offense count: 1
+# Configuration parameters: AlignWith, SupportedStyles.
+Lint/DefEndAlignment:
+  Enabled: false
+
+# Offense count: 16
+# Configuration parameters: AllowURI, URISchemes.
+Metrics/LineLength:
+  Max: 133
+
+# Offense count: 1
+Style/ClassVars:
+  Enabled: false
+
+# Offense count: 2
+Style/Documentation:
+  Enabled: false
+
+# Offense count: 2
+# Configuration parameters: MaxLineLength.
+Style/IfUnlessModifier:
+  Enabled: false
+
+# Offense count: 7
+# Configuration parameters: MaxSlashes.
+Style/RegexpLiteral:
+  Enabled: false
