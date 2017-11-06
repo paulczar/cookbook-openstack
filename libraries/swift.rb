@@ -22,13 +22,15 @@ module Openstack
       include Openstack::Client
 
       def swift
-        @@swift ||= Fog::Storage.new(provider: 'openstack',
-                                     openstack_username: new_resource.openstack_username,
-                                     openstack_api_key: new_resource.openstack_password,
-                                     openstack_auth_url: new_resource.openstack_auth_url,
-                                     openstack_tenant: new_resource.openstack_tenant,
-                                     openstack_region: new_resource.openstack_region,
-                                     openstack_temp_url_key: new_resource.openstack_temp_url_key)
+        @swift ||= Fog::Storage.new(provider: 'openstack',
+                                    openstack_username: new_resource.openstack_username,
+                                    openstack_api_key: new_resource.openstack_password,
+                                    openstack_auth_url: new_resource.openstack_auth_url,
+                                    openstack_tenant: new_resource.openstack_tenant,
+                                    openstack_region: new_resource.openstack_region,
+                                    openstack_temp_url_key: new_resource.openstack_temp_url_key,
+                                    openstack_user_domain: new_resource.openstack_user_domain,
+                                    openstack_project_id: new_resource.openstack_project_id)
       end
     end
   end

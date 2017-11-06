@@ -30,6 +30,8 @@ attribute :container, kind_of: String, required: true
 attribute :object, kind_of: String
 attribute :binmode, kind_of: [TrueClass, FalseClass], default: false
 attribute :openstack_temp_url_key, kind_of: String
+attribute :openstack_user_domain, kind_of: String
+attribute :openstack_project_id, kind_of: String
 
 attr_accessor :exists
 attr_accessor :checksum
