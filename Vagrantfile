@@ -13,7 +13,7 @@ Vagrant.configure('2') do |config|
     }
 
     chef.run_list = [
-      'recipe[openstack-client::default]'
+      'recipe[openstack-client::default]',
     ]
   end
 end
